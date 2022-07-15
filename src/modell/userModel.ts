@@ -11,8 +11,12 @@ export class UserModel {
   deleteUser = async (id: string) => {
     const resp = await axios.delete(`${this.URI}/users/${id}`);
     return resp.status;
-
   }
+
+  addUser = (user: User) => {
+    return axios.post(`${this.URI}/users`, user).then(resp => resp.status)
+  }
+
 
 }
 

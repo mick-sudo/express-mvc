@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <%- include('./head') %>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>CreateUser </title>
+</head>
+
+<body>
+  <%- include('./navBar') %>
+
+    <form method="post" action="/users/create">
+
+      <input type="hidden" value="0">
+      <div class="form-group col-md-4 mb-3 p-4">
+        <label for="name"> name </label>
+        <input type="string" class="form-control" id="name" placeholder="Enter name" name="name">
+      </div>
+
+      <div class="form-group col-md-4 mb-3 p-4">
+        <label for="username">username </label>
+        <input type="username" class="form-control" id="email" placeholder="username" name="username">
+      </div>
+
+      <div class="form-group col-md-4 mb-3 p-4">
+        <label for="company">company </label>
+        <input type="company" class="form-control" id="company" placeholder="company" name="company">
+      </div>
+
+      <button type="submit" class="btn btn-primary m-4">Submit</button>
+    </form>

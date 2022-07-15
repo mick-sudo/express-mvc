@@ -18,6 +18,11 @@ export class UsersContoller {
     }
   }
 
+  createUserPage = (req: Request, res: Response) => {
+    res.render('create')
+  }
+
+
 
 
 }
