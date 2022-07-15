@@ -12,13 +12,13 @@
     <div></div>
     <% for (let i=0; i < users.length; i++ ) { %>
       <div class="card d-inline-flex m-4 p-4" style="width: 18rem;">
+        <h6 class="card-subtitle mb-2 text-muted">
+          <%= users[i].username%>
+        </h6>
         <div class="card-body">
           <h5 class="card-title">
-            <%= users[i].name%>
+            <%= users[i].email%>
           </h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            <%= users[i].username%>
-          </h6>
           <p class="card-text">
             <%= users[i].company.name%>
           </p>
