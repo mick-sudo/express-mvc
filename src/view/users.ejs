@@ -9,10 +9,9 @@
 <body>
   <%- include('./navbar')%>
     <h1>Users</h1>
-    <button type="button" class="btn btn-primary">Ajouter</button>
-
+    <div></div>
     <% for (let i=0; i < users.length; i++ ) { %>
-      <div class="card" style="width: 18rem;">
+      <div class="card d-inline-flex m-4 p-4" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">
             <%= users[i].name%>
@@ -23,7 +22,7 @@
           <p class="card-text">
             <%= users[i].address.street%>
           </p>
-          <a href="#" class="card-link btn btn-danger">delete</a>
+          <a class="btn btn-danger" href="users/delete/<%=users[i].id %>"> delete </a>
         </div>
       </div>
       <% } %>

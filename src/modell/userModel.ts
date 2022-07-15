@@ -8,5 +8,11 @@ export class UserModel {
   getAllUser = (): Promise<UserModel> => {
     return axios.get(this.URI + '/users').then(item => item.data)
   }
+  deleteUser = async (id: string) => {
+    const resp = await axios.delete(`${this.URI}/users/${id}`);
+    return resp.status;
+
+  }
+
 }
 
